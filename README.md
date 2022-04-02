@@ -1,12 +1,14 @@
-# Project Title
+# BizOps Loan Application Qualification
+Software that allows loan applicant to save their application in a CSV file 
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+
 
 ---
 
 ## Technologies
-
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+- Python 3.8.5
+- fire==0.4.0
+- questionary==1.10.0
 
 ---
 

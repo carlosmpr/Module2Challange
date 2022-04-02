@@ -1,0 +1,14 @@
+certifi==2021.10.8
+charset-normalizer==2.0.12
+docopt==0.6.2
+fire==0.4.0
+idna==3.3
+pipreqs==0.4.11
+prompt-toolkit==3.0.28
+questionary==1.10.0
+requests==2.27.1
+six==1.16.0
+termcolor==1.1.0
+urllib3==1.26.9
+wcwidth==0.2.5
+yarg==0.1.9
