@@ -109,13 +109,14 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    # 
     user_save_csv = questionary.text("Whould you like to save your qualifyng loan (YES or NO)?").ask()
     if(user_save_csv.upper() == "YES"):
         csvpath = questionary.text("Enter the path to save your file (.csv):").ask()
         csvpath = Path(f"{csvpath}/{date.today()}.csv")
         return write_csv(csvpath,qualifying_loans)
+    else:
+        print("Have a nice day!")
         
  
 
