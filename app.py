@@ -105,15 +105,23 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
+        "Prompt dialog see if the user would like to save the qualofying_loan information
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # 
-    user_save_csv = questionary.text("Whould you like to save your qualifyng loan (YES or NO)?").ask()
-    if(user_save_csv.upper() == "YES"):
+    # store users answeer 
+    save_csv_file = questionary.text("Whould you like to save your qualifyng loan (YES or NO)?").ask()
+    
+    # Check if the user wants to save the file 
+    if(save_csv_file.upper() == "YES"):
+        # Asking the user the path to save the file 
         csvpath = questionary.text("Enter the path to save your file (.csv):").ask()
+        
+        # Storing the path and file name with the todays informations
         csvpath = Path(f"{csvpath}/{date.today()}.csv")
+        
+        # Calling the function to write the csv file
         return write_csv(csvpath,qualifying_loans)
     else:
         print("Have a nice day!")
