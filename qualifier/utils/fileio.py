@@ -32,11 +32,26 @@ def load_csv(csvpath):
 
 
 def write_csv(csvpath, qualifying_loans):
-    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
-    with open(csvpath, 'w', newline='') as csvfile:
+     """Create the CSV file from path provided.
+
+    Args:
+        csvpath (Path): The csv file path.
+         qualifying_loans: List of the qualifying loans
+
+    Returns:
+        A list of lists that contains the rows of data from the CSV file.
+
+    """
+    
+    # List of header to add to the csv file
+     header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+     
+     #Create the CSV file
+     with open(csvpath, 'w', newline='') as csvfile:   
         print("Saving your file please wait...")
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(header)
+        
         for row in qualifying_loans:
             csvwriter.writerow(row.values())
-    print("Operation completed have a nice day!")
+     print("Operation completed have a nice day!")

@@ -122,7 +122,7 @@ def save_qualifying_loans(qualifying_loans):
         csvpath = Path(f"{csvpath}/{date.today()}.csv")
         
         # Calling the function to write the csv file
-        return write_csv(csvpath,qualifying_loans)
+        write_csv(csvpath,qualifying_loans)
     else:
         print("Have a nice day!")
         
