@@ -53,5 +53,5 @@ def write_csv(csvpath, qualifying_loans):
         csvwriter.writerow(header)
         
         for row in qualifying_loans:
-            csvwriter.writerow(row.values())
+            csvwriter.writerow(row)
      print("Operation completed have a nice day!")
