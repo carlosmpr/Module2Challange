@@ -11,7 +11,7 @@ import fire
 import questionary
 from pathlib import Path
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import (load_csv , write_csv)
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -22,6 +22,7 @@ from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
+from datetime import date
 
 
 def load_bank_data():
@@ -110,7 +111,13 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-
+    user_save_csv = questionary.text("Whould you like to save your qualifyng loan (YES or NO)?").ask()
+    if(user_save_csv.upper() == "YES"):
+        csvpath = questionary.text("Enter the path to save your file (.csv):").ask()
+        csvpath = Path(f"{csvpath}/{date.today()}.csv")
+        return write_csv(csvpath,qualifying_loans)
+        
+ 
 
 def run():
     """The main function for running the script."""

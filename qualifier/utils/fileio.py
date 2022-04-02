@@ -28,3 +28,14 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+
+
+def write_csv(csvpath, qualifying_loans):
+    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+    with open(csvpath, 'w', newline='') as csvfile:
+        print("Writing the data to a CSV file...")
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(header)
+        for row in qualifying_loans:
+            csvwriter.writerow(row.values())
