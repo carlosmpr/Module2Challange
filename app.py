@@ -22,7 +22,7 @@ from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
-from datetime import date
+from datetime import date, datetime
 
 
 def load_bank_data():
@@ -113,13 +113,17 @@ def save_qualifying_loans(qualifying_loans):
     # store users answeer 
     save_csv_file = questionary.text("Whould you like to save your qualifyng loan (YES or NO)?").ask()
     
+    # Storing time information to name the csv file 
+    now = datetime.now()
+    current_time = now.strftime("%H-%M-%S")
+    
     # Check if the user wants to save the file 
     if(save_csv_file.upper() == "YES"):
         # Asking the user the path to save the file 
         csvpath = questionary.text("Enter the path to save your file (.csv):").ask()
         
-        # Storing the path and file name with the todays informations
-        csvpath = Path(f"{csvpath}/{date.today()}.csv")
+        # Storing the path and file name with the todays informations and time to not override previous file
+        csvpath = Path(f"{csvpath}/{date.today()}{current_time}.csv")
         
         # Calling the function to write the csv file
         write_csv(csvpath,qualifying_loans)
