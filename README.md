@@ -1,5 +1,5 @@
 # BizOps Loan Application Qualification
-Software that allows loan applicant to save their application in a CSV file 
+Software that allows user to verify their loan qualification using a prompt dialog to get the users financial information, and Allows the user to save the result in a csv file 
 
 
 
