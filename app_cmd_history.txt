@@ -1,0 +1,15 @@
+cd C:\Users\guelo\OneDrive\Desktop\loan_qualifier_app
+python3 -m venv tutorial-env
+python --version
+python -m venv tutorial-env
+devEnv\Scripts\activate.bat
+pip freeze
+pip install questionary
+pip install fire
+pip freeze
+pip install pipreqs
+pip3 freeze > requirements.txt
+python app.py
+history 50 > running_app_terminal_history.txt
+doskey /h > c:C:\Users\guelo\OneDrive\Desktop\loan_qualifier_app\app_cmd_history.txt
+doskey /h > C:\Users\guelo\OneDrive\Desktop\loan_qualifier_app\app_cmd_history.txt

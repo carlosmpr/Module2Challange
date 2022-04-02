@@ -1,0 +1,50 @@
+   56  cd ssh/
+   57  cat .ssh/id_rsa.pub
+   58  cat ./id_rsa.pub
+   59  cat id_rsa.pub
+   60  cat ~/.ssh/id_rsa.pub
+   61  cd Desktop/
+   62  dir
+   63  ls
+   64  cd ..
+   65  ls
+   66  cd Desktop/
+   67  ls
+   68  python -m venv tutorial-env
+   69  python -m venv devEnv
+   70  devEnv\Scripts\activate.bat
+   71  pip freeze
+   72  pip install fire
+   73  pip install questionary
+   74  pip freeze
+   75  pip install fire
+   76  ls
+   77  source devEnd/bin/activate
+   78  ls
+   79  source devEnv/bin/activate
+   80  devEnv\Scripts\activate.bat
+   81  git add .
+   82  git commit -m "Changing the Readmefile + Installing dependecies + Creeating requiremnt.txt"
+   83  git add .
+   84  git commit -m "Created the gitignore file for devEnv"
+   85  git add . 
+   86  git commit -m "Created the write_csv function + save_qualifying_loans logic"
+   87  git push
+   88  git add .
+   89  git commit -m "updated the write_csv message + adding else case to save_qualifying_loans"
+   90  git push
+   91  git add .
+   92  git commit -m "Adding comments to the save_qualifying_loans function"
+   93  git add .
+   94  git commit -m "Adding comments to the write_csv function"
+   95  git add .
+   96  git commit -m "Updating Readme description"
+   97  git add .
+   98  git commit -m "Adding Readme information + fixing write_csv function"
+   99  git push
+  100  git add .
+  101  git commit -m "Completed the readme information"
+  102  git push
+  103  git add .
+  104  git commit -m "Adding time information to save csv file"
+  105  history 50 > git_terminal_history.txt
